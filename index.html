@@ -10,7 +10,7 @@
         var _pop_sound = new Audio("pop.mp3");
         function pop() {
             var state = 0;
-            window.setInterval(function () {
+            window.setInterval(function (state) {
                 if (state == 0) {
                     document.getElementById("chpokerId").src = "./1.png";
                     _pop_sound.play();
