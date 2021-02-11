@@ -7,16 +7,16 @@
         
     <script language="javascript">
         var chpoks = 0;
-        var _pop = new Audio("pop.mp3");
+        var _pop_sound = new Audio("pop.mp3");
         function pop() {
             window.setInterval(function () {
             document.getElementById("imgClickAndChange").src = "./1.png";
-            _pop.play()
+            _pop_sound.play()
             document.getElementById("imgClickAndChange").src = "./0.png";
-            _pop.play()
+            _pop_sound.play()
             chpoks++;
             document.getElementById("chpoks").innerHTML = chpoks;
-            }, 1000); // repeat forever, polling every 3 seconds
+            }, 300); // repeat forever, polling every 0.3 seconds
         }
     </script>
 
