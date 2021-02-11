@@ -12,7 +12,7 @@
         function pop() {
             window.setInterval(function () {
                 state = document.getElementById("state");
-                if (_state == "closed") {
+                if (state == "closed") {
                     document.getElementById("chpokerId").src = "./1.png";
                     _pop_sound.play();
                     chpoks++;
