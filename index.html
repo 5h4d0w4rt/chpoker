@@ -14,16 +14,14 @@
                 state = document.getElementById("state");
                 if (state == "closed") {
                     document.getElementById("chpokerId").src = "./1.png";
-                    _pop_sound.play();
-                    chpoks++;
                     state.title = "open";
                 }
                 else {
                     document.getElementById("chpokerId").src = "./0.png";
-                    _pop_sound.play();
-                    chpoks++;
                     state.title = "closed";
                 }
+                _pop_sound.play();
+                chpoks++;
                 document.getElementById("chpoks").innerHTML = chpoks;
             }, 1000); // repeat forever, polling every 0.3 seconds
         }
