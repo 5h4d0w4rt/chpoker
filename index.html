@@ -15,15 +15,16 @@
                     document.getElementById("chpokerId").src = "./1.png";
                     _pop_sound.play();
                     state = 1;
+                    chpoks++;
                 }
                 else {
                     document.getElementById("chpokerId").src = "./0.png";
                     _pop_sound.play();
                     state = 0;
+                    chpoks++;
                 }
-                chpoks++;
                 document.getElementById("chpoks").innerHTML = chpoks;
-            }, 100); // repeat forever, polling every 0.3 seconds
+            }, 2000); // repeat forever, polling every 0.3 seconds
         }
     </script>
 
