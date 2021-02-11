@@ -13,11 +13,13 @@
             window.setInterval(function () {
                 if (state == 0) {
                     document.getElementById("chpokerId").src = "./1.png";
-                    _pop_sound.play()
+                    _pop_sound.play();
+                    state = 1;
                 }
                 else {
                     document.getElementById("chpokerId").src = "./0.png";
-                _pop_sound.play()
+                    _pop_sound.play();
+                    state = 0;
                 }
                 chpoks++;
                 document.getElementById("chpoks").innerHTML = chpoks;
