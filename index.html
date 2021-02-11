@@ -7,20 +7,16 @@
         
     <script language="javascript">
         var chpoks = 0;
-
+        var _pop = new Audio("pop.mp3");
         function pop() {
             window.setInterval(function () {
-            var state = 0;
-            // increase by num 1, reset to 0 at 4
-            if (state == 0) {
-                document.getElementById("imgClickAndChange").src = "./1.png";
-            } else {
-                document.getElementById("imgClickAndChange").src = "./0.png";
-            }
-            new Audio("pop.mp3").play();
+            document.getElementById("imgClickAndChange").src = "./1.png";
+            _pop.play()
+            document.getElementById("imgClickAndChange").src = "./0.png";
+            _pop.play()
             chpoks++;
             document.getElementById("chpoks").innerHTML = chpoks;
-            }, 3000); // repeat forever, polling every 3 seconds
+            }, 1000); // repeat forever, polling every 3 seconds
         }
     </script>
 
