@@ -5,28 +5,22 @@
     </head>
     <body>
     <script language="javascript">
-        
-        function sleep (time) {
-            return new Promise((resolve) => setTimeout(resolve, time));
-        }
-        
         var i = 0;
         var chpoks = 0;
 
         function changeImage() {
-            while (true)
-                new Audio("pop.mp3").play();
+            new Audio("pop.mp3").play();
 
-                if (i == 0) {
-                    document.getElementById("imgClickAndChange").src = "./1.png";
-                    i = 1;
-                } else {
-                    document.getElementById("imgClickAndChange").src = "./0.png";
-                    i = 0;
-                }
+            if (i == 0) {
+                document.getElementById("imgClickAndChange").src = "./1.png";
+                i = 1;
+            } else {
+                document.getElementById("imgClickAndChange").src = "./0.png";
+                i = 0;
+            }
 
-                chpoks++;
-                document.getElementById("chpoks").innerHTML = chpoks;
+            chpoks++;
+            document.getElementById("chpoks").innerHTML = chpoks;
         }
     </script>
 
