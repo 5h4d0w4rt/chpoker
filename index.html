@@ -11,7 +11,7 @@
         var _pop_sound = new Audio("pop.mp3");
         function pop() {
             window.setInterval(function () {
-                state = document.getElementById("state");
+                state = document.getElementById("state").title;
                 if (state == "closed") {
                     document.getElementById("chpokerId").src = "./1.png";
                     state.title = "open";
