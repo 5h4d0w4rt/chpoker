@@ -4,27 +4,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body onload="pop()">
-        
+    <div id="state" style="display: none;" title="closed"/>
+
     <script language="javascript">
         var chpoks = 0;
         var _pop_sound = new Audio("pop.mp3");
-        function pop(state=0) {
-            var _state = state;
-            window.setInterval(function (_state) {
-                if (_state == 0) {
+        function pop() {
+            window.setInterval(function () {
+                state = document.getElementById("state");
+                if (_state == "closed") {
                     document.getElementById("chpokerId").src = "./1.png";
                     _pop_sound.play();
                     chpoks++;
-                    _state = 1;
+                    state.title = "open";
                 }
                 else {
                     document.getElementById("chpokerId").src = "./0.png";
                     _pop_sound.play();
                     chpoks++;
-                    _state = 0;
+                    state.title = "closed";
                 }
                 document.getElementById("chpoks").innerHTML = chpoks;
-            }, 2000); // repeat forever, polling every 0.3 seconds
+            }, 1000); // repeat forever, polling every 0.3 seconds
         }
     </script>
 
