@@ -9,14 +9,19 @@
         var chpoks = 0;
         var _pop_sound = new Audio("pop.mp3");
         function pop() {
+            var state = 0;
             window.setInterval(function () {
-            document.getElementById("imgClickAndChange").src = "./1.png";
+            if (state == 0) {
+                document.getElementById("imgClickAndChange").src = "./1.png";
+                _pop_sound.play()
+            }
+            else {
+                document.getElementById("imgClickAndChange").src = "./0.png";
             _pop_sound.play()
-            document.getElementById("imgClickAndChange").src = "./0.png";
-            _pop_sound.play()
+            }
             chpoks++;
             document.getElementById("chpoks").innerHTML = chpoks;
-            }, 300); // repeat forever, polling every 0.3 seconds
+            }, 100); // repeat forever, polling every 0.3 seconds
         }
     </script>
 
